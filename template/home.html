@@ -1,0 +1,28 @@
+<div class="post-container">
+    <div class="post-header">
+        <div class="post-header-top heading">
+            {{post.postHeadingLeft}}
+        </div>
+        <div class="post-header-top">
+            {{post.postHeadingRight}}
+        </div>
+    </div>
+    <div>
+        <div class="headline-container">
+
+        </div>
+        <div class="headline-content">
+            <p ng-bind-html="post.postBody"></p>
+        </div>
+    </div>
+    <div class="post-footer" ng-show="post.postFooterLeft || post.postFooterRight">
+        <div class="post-footer-container">
+            <div class="left-side">
+                <p>{{post.postFooterLeft}}</p>
+            </div>
+            <div class="right-side">
+                <p>{{post.postFooterRight}}</p>
+            </div>
+        </div>
+    </div>
+</div>

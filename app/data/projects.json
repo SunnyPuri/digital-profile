@@ -1,0 +1,45 @@
+[
+    {
+        "postHeadingLeft" : "Train Simulator",
+        "postHeadingRight" : "INFOSYS",
+        "postBody" : "Working on a web application for a train simulator which analyse freight and passenger train travel. The simulation model is a useful tool in analysing locomotive performance related to various train weights, routes, horsepower, gear ratios, and consist configurations. It is a tool to analyse details of train movement characteristics. <br><br>-Involved in developing Train Simulator Web application using niche technologies like Spring MVC 4.0, Hibernate. Created Restful APIs for the same. <br><br>-Implemented a new user interface for improved client experience targeting modern browsers with support for CSS3, HTML5, Angular JS and optimized engines for JavaScript processing and HTML Layout.<br><br>-This program modernized the train simulator interface using Responsive Web Design and Single Page Architecture (SPA), to enhance user experience in PC, Mobile and Tablet devices.",
+        "postFooterLeft" : "",
+        "postFooterRight" : "Angular JS, HTML5, CSS3, Bootstrap, Spring MVC, Hibernate"
+    },
+    {
+        "postHeadingLeft" : "Market Visualization Dashboard",
+        "postHeadingRight" : "INFOSYS",
+        "postBody" : "Presented a visualization strategy that highlights volume of freight movements. The visualization strategy incorporate a methodology of basic statistics (i.e. the average cost to move between zones). Your visualization should also compare with third party index cost data",
+        "postFooterLeft" : "",
+        "postFooterRight" : "MEAN Stack, HTML5, CSS3, Bootstrap, GIT, C3 JS"
+    },
+    {
+        "postHeadingLeft" : "ONLINE SQL INJECTION TEST ENGINE",
+        "postHeadingRight" : "Online",
+        "postBody" : "It is an Online Platform to learn and practise SQL Injection Techniques. It consists of 15 Levels where you can learn from Scratch. Some of the techniques are Blind Injection, Error Based, String based etc.",
+        "postFooterLeft" : "www.injection.xtremehackers.com",
+        "postFooterRight" : "HTML, CSS 3, BOOTSTRAP, PHP, MySql"
+    },
+    {
+        "postHeadingLeft" : "CONTROLLING PERIPHERAL DEVICE USING SIXTH SENSE",
+        "postHeadingRight" : "College",
+        "postBody" : "Creating a virtual human computer interaction device such as mouse using a webcam. In this project, a virtual mouse application has been designed based on finger tracking and implemented using a regular webcam. Here we use only the finger-tips to control the mouse cursor and click. The motivation was to create an object tracking application to interact with the computer, and develop a virtual computer interaction device.",
+        "postFooterLeft" : "",
+        "postFooterRight" : "JAVA (Using JavaCV)"
+    },
+    {
+        "postHeadingLeft" : "INTRANET MAILING SYSTEM",
+        "postHeadingRight" : "College",
+        "postBody" : "It is a web application where you can send and receive mail within your private network.",
+        "postFooterLeft" : "",
+        "postFooterRight" : "HTML, CSS, BOOTSTRAP, PHP, JQuery, MySql"
+    },
+    {
+        "postHeadingLeft" : "HELPDESK MANAGEMENT SYSTEM",
+        "postHeadingRight" : "College",
+        "postBody" : "It is a web application. It is a step to support various people to solve the queries regarding computer issues. This application is run by Administrator, Technician and User. User is the customer who submit his queries to administrator and waits for the answer, now queries are assigned to the technicians by administrator. Respective technicians solved the queries and send back to the customer.",
+        "postFooterLeft" : "",
+        "postFooterRight" : "HTML, CSS, BOOTSTRAP, PHP, JQuery, MySql"
+    }
+    
+]

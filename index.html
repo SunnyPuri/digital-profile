@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Sunny Puri | Official Site</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/loading-bar.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    
+    
+      
+  </head>
+  <body ng-controller="mainController">
+    <div class="main">
+        
+        <div class="navbar-top">
+			<div class="navbar-container">
+				<ul class="menu-list">
+					<li><a href="http://www.sunnypuri.in" target="_blank"> Sunny Puri</a></li>
+                    <li><i class="fa fa-chevron-right"></i></li>
+					<li><p>Senior Systems Engineer at Infosys</p></li>
+				</ul>
+			</div>
+		</div>
+        
+        <div class="background-cover">
+            <div class="transparent"></div>
+        </div>
+        
+        <div class="profile-container">
+            <div class="profile-cover">
+                <div class="profile-section">
+                    <a class="profile-image" href="javascript:void(0)"> <img src="img/me.png" alt="Sunny Puri"></a>
+                    <div class="profile-info">
+                        <h2 class="profile-name">
+                            <a href="#">SUNNY PURI</a>
+                        </h2>
+                        <p class="profile-description">
+                            <span>Front End Developer.<br />Currently working in Infosys as a Senior Systems Engineer.</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="profile-section-right">
+                    <div class="follow-section">
+                        <a href="javascipt:void(0);" class="connect" ng-click="connectStatus = !connectStatus" ng-class="{'active' : connectStatus }"><i ng-class="connectStatus ? 'fa fa-minus-circle' : 'fa fa-plus-circle'"></i> Connect</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="connect-section" ng-class="{'close' : !connectStatus }">
+            <div class="connect-container">
+                <div class="cross" ng-click="connectStatus = !connectStatus"><i class="fa fa-times"></i></div>
+                <a href="https://www.linkedin.com/in/sunnypuri/" target="_blank" class="social fa fa-linkedin"></a>
+                <a href="https://github.com/sunnypuri" target="_blank" class="social fa fa-github"></a>
+                <a href="https://www.facebook.com/purisunny" target="_blank" class="social fa fa-facebook"></a>
+                <a href="javascript:void(0);" target="_blank" class="social fa fa-google"></a>
+                <a href="javascript:void(0);" target="_blank" class="social fa fa-twitter"></a>
+                
+            </div>
+	   </div>
+        
+        <div class="col-md-12">
+            <div class="body-section">
+
+                <div class="col-md-3">
+                    <div class="sidebar sidebar-left">
+                        
+                        <div class="box-container">
+                            <div class="box-header">
+                                <p>SUNNY PURI</p>
+                            </div>
+                            
+                            <div class="box-body">
+                                <p>Senior Systems Engineer at Infosys</p>
+                            </div>
+                            
+                            <div class="box-footer">
+                            </div>                    
+                            
+                        </div>
+                        
+                        <div class="box-container">
+                            <div class="box-header">
+                                <p>About Me</p>
+                            </div>
+                            <div class="box-body">
+                                <p>
+                                    <i class="fa fa-quote-left"></i> I am dedicated to achieve professional excellence, career progression and personal development by working in a learning environment that encourages growth and enriches my experience. I have a quest to learn, passion for learning and development and willengness to accept challenges. I am a confident, creative and passionate coder. <i class="fa fa-quote-right"></i>
+                                </p>
+                            </div>
+                            <div class="box-footer">
+                                <i class="fa fa-hand-o-right"></i> www.sunnypuri.in
+                            </div>
+                        </div>
+                        
+                        <div class="box-container">
+                            <div class="box-header">
+                                <p>Contacts</p>
+                            </div>
+                            <div class="box-body">
+                                <p>
+                                    <i class="fa fa-envelope"></i> sunnypuri2002@gmail.com
+                                </p>
+                                <p>
+                                    <i class="fa fa-phone"></i> 9696822525 / 9696114433
+                                </p>
+                            </div>
+                            <div class="box-footer">
+                                <p>
+                                    <i class="fa fa-home"></i> Pune, Maharashtra, India
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 main-content">
+                    <div class="menu-container">
+                        
+                        <ul class="menu">
+                            <li ng-repeat="menuItem in menuItems" class="menu-item" ng-class="{active : selectedMenu == menuItem.menu}" ng-click=changeMenu(menuItem.menu)><i class="{{menuItem.icon}}"></i> <span class="hidden-xs" ng-bind="menuItem.menu"></span></li>
+                        </ul>
+                        
+                    </div>
+                    
+                    
+                    <home ng-repeat="post in posts" ></home>
+                    
+                    
+                    <div class="loading-container" ng-show="posts.length==0">
+                        <div class="postLoadCard">
+                            <div class="bodyWrap">
+                                <div class="loadingAnim"></div>
+                                <div class="loadingAnim"></div>
+                            </div>
+                            <div class="footerWrap"></div>
+                        </div>
+				    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="sidebar sidebar-right">
+                            
+                        <div class="box-container">
+                            <div class="box-header">
+                                <p>Skills</p>
+                            </div>
+                            <div class="box-body">
+                                <p class="sub-heading">Development</p>
+                                <p>
+                                    Angular 4/5, VUE 2.0, MEAN Stack, Javascript, ES6, Bootstrap 4, CSS3, HTML5, SCSS, GIT, Chart JS
+                                </p>
+                                <p class="sub-heading">Security</p>
+                                <p>
+                                    Penetration Testing, Ethical Hacking
+                                </p>
+
+                            </div>
+                            <div class="box-footer">
+                            </div>
+                        </div>
+                        
+                        <div class="box-container">
+                            <div class="box-header">
+                                <p>Certification</p>
+                            </div>
+                            <div class="box-body">
+                                <p>
+                                    Certified Ethical Hacker (C|EH)<br>
+                                    Oct 2013 – Oct 2016<br>
+                                    License ECC72696327697<br>
+                                    EC-Council
+                                </p>
+
+                            </div>
+                            <div class="box-footer">
+                                 
+                            </div>
+                        </div>
+                            
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        
+        
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-sanitize.js"></script>
+      <script src="js/loading-bar.js"></script>
+    <!-- load momentJS (required for angular-moment) -->
+    <script src="js/moment.min.js"></script>
+
+    <!-- load angular-moment -->
+    <script src="js/angular-moment.min.js"></script>
+    <script src="app.js"></script>
+    <script src="app/controller/app.controller.js"></script>
+    <script src="app/directive/app.directive.js"></script>
+    <script src="app/service/app.service.js"></script>
+  </body>
+</html>
