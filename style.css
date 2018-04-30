@@ -643,3 +643,55 @@ a.connect.active{
 .padding-reset{
     padding: 0px;
 }
+
+#sticky-anchor{
+    display: none;
+}
+
+#sticky-anchor-right{
+    display: none;
+}
+
+#sticky-anchor-menu{
+    display: none;
+}
+
+
+.stick-menu {
+    transition: all 1s;
+}
+
+@media screen and (min-width: 992px){
+    .stick {
+        margin-top: 10px !important;
+        position: fixed;
+        top: 0;
+        z-index: 10000;
+        width: inherit;
+        padding-right: 44px !important;
+    }
+
+    #sticky-anchor{
+        display: block;
+    }
+
+    #sticky-anchor-right{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .stick-menu {
+        margin-top: 10px !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+        width: inherit;
+    }
+
+    #sticky-anchor-menu{
+        display: block;
+    }
+}

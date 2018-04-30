@@ -13,7 +13,6 @@
     <link href="css/loading-bar.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
     
-    
       
   </head>
   <body ng-controller="mainController">
@@ -66,11 +65,12 @@
             </div>
 	   </div>
         
-        <div class="col-md-12 padding-reset">
+        <div class="col-md-12">
             <div class="body-section">
 
                 <div class="col-md-3">
-                    <div class="sidebar sidebar-left">
+					<div id="sticky-anchor"></div>
+                    <div id="sticky" class="sidebar sidebar-left">
                         
                         <div class="box-container">
                             <div class="box-header">
@@ -122,7 +122,8 @@
                 </div>
 
                 <div class="col-md-6 main-content">
-                    <div class="menu-container">
+                    <div id="sticky-anchor-menu"></div>
+                    <div id="sticky-menu" class="menu-container">
                         
                         <ul class="menu">
                             <li ng-repeat="menuItem in menuItems" class="menu-item" ng-class="{active : selectedMenu == menuItem.menu}" ng-click=changeMenu(menuItem.menu)><i class="{{menuItem.icon}}"></i> <span class="hidden-xs" ng-bind="menuItem.menu"></span></li>
@@ -146,7 +147,8 @@
                 </div>
 
                 <div class="col-md-3">
-                    <div class="sidebar sidebar-right">
+					<div id="sticky-anchor-right"></div>
+                    <div id="sticky-right" class="sidebar sidebar-right">
                             
                         <div class="box-container">
                             <div class="box-header">
@@ -210,5 +212,45 @@
     <script src="app/controller/app.controller.js"></script>
     <script src="app/directive/app.directive.js"></script>
     <script src="app/service/app.service.js"></script>
+	
+	<script>
+        function sticky_relocate() {
+            var window_top = $(window).scrollTop();
+            var div_top = $('#sticky-anchor').offset().top;
+            var div_top_right = $('#sticky-anchor-right').offset().top;
+            var div_menu = $('#sticky-anchor-menu').offset().top;
+            if (window_top > div_top) {
+                $('#sticky').addClass('stick');
+                $('#sticky-anchor').height($('#sticky').outerHeight());
+            } else {
+                $('#sticky').removeClass('stick');
+                $('#sticky-anchor').height(0);
+            }
+            
+            if (window_top > div_top_right) {
+                $('#sticky-right').addClass('stick');
+                $('#sticky-anchor-right').height($('#sticky-right').outerHeight());
+            } else {
+                $('#sticky-right').removeClass('stick');
+                $('#sticky-anchor-right').height(0);
+            }
+
+            if (window_top > div_menu) {
+                $('#sticky-menu').addClass('stick-menu');
+                $('#sticky-anchor-menu').height($('#sticky-menu').outerHeight());
+            } else {
+                $('#sticky-menu').removeClass('stick-menu');
+                $('#sticky-anchor-menu').height(0);
+            }
+        }
+
+        $(function() {
+            $(window).scroll(sticky_relocate);
+            sticky_relocate();
+        });
+     
+    </script>
+	
+	
   </body>
 </html>
