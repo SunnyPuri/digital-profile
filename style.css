@@ -661,6 +661,10 @@ a.connect.active{
     transition: all 1s;
 }
 
+.small-p0{
+    padding: 0px 15px;
+}
+
 @media screen and (min-width: 992px){
     .stick {
         margin-top: 10px !important;
@@ -681,7 +685,7 @@ a.connect.active{
     }
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
     .stick-menu {
         margin-top: 10px !important;
         position: fixed;
@@ -694,5 +698,9 @@ a.connect.active{
 
     #sticky-anchor-menu{
         display: block;
+    }
+
+    .small-p0{
+        padding: 0;
     }
 }
