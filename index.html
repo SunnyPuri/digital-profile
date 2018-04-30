@@ -45,6 +45,7 @@
                         </p>
                     </div>
                 </div>
+                
                 <div class="profile-section-right">
                     <div class="follow-section">
                         <a class="connect" ng-click="connectStatus = !connectStatus" ng-class="{'active' : connectStatus }"><i ng-class="connectStatus ? 'fa fa-minus-circle' : 'fa fa-plus-circle'"></i> Connect</a>
@@ -53,7 +54,7 @@
             </div>
         </div>
         
-        <div class="connect-section" ng-class="{'close' : !connectStatus }">
+        <div class="connect-section" ng-show="connectStatus">
             <div class="connect-container">
                 <div class="cross" ng-click="connectStatus = !connectStatus"><i class="fa fa-times"></i></div>
                 <a href="https://www.linkedin.com/in/sunnypuri/" target="_blank" class="social fa fa-linkedin"></a>
