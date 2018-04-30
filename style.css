@@ -669,6 +669,7 @@ a.connect.active{
         z-index: 10000;
         width: inherit;
         padding-right: 44px !important;
+        transition: margin-top 1s;
     }
 
     #sticky-anchor{
